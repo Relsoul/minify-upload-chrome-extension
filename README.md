@@ -1,5 +1,5 @@
 # 说明
-轻量，简约基于koa+nodejs的文件上传服务器。后端github地址:[戳我查看](https://github.com/Relsoul/minify-upload-chrome-extension)
+轻量，简约基于koa+nodejs的文件上传服务器。后端github地址:[戳我查看](https://github.com/Relsoul/minify-upload)
 
 # 截图
 
