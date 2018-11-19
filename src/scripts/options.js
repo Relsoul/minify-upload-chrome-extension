@@ -1,30 +1,21 @@
 import ext from "./utils/ext";
 import storage from "./utils/storage";
+const $ = require('../../node_modules/jquery/dist/jquery.min');
+require('../../node_modules/materialize-css/dist/js/materialize.min');
 
-var colorSelectors = document.querySelectorAll(".js-radio");
-
-var setColor = (color) => {
-  document.body.style.backgroundColor = color;
-};
-
-storage.get('color', function(resp) {
-  var color = resp.color;
-  var option;
-  if(color) {
-    option = document.querySelector(`.js-radio.${color}`);
-    setColor(color);
-  } else {
-    option = colorSelectors[0]
-  }
-
-  option.setAttribute("checked", "checked");
+$('#submit-ops').on('click',function (e) {
+  e.stopImmediatePropagation();
+  e.preventDefault();
+  const ops = $('#ops-form').serializeArray();
+  console.log('eee',ops);
+  storage.set({ ops }, function() {
+    M.toast({html: '保存成功'})
+  });
 });
 
-colorSelectors.forEach(function(el) {
-  el.addEventListener("click", function(e) {
-    var value = this.value;
-    storage.set({ color: value }, function() {
-      setColor(value);
-    });
-  })
-})
+storage.get('ops', function(resp) {
+  console.log('resp', resp);
+  for(let i of resp.ops){
+    $(`#${i.name}`).attr('value',i.value)
+  }
+});

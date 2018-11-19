@@ -4,11 +4,18 @@
     <meta charset="utf-8">
     <link href="styles/popup.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="minfiy-upload-body">
     <div id="app" class="popup-content">
-      <h1 class="app-name">Extension Boilerplate</h1>
+      <h1 class="app-name">minfiy-upload</h1>
 
-      <div id="display-container"></div>
+      <div id="display-container">
+        <input id="file-input" type="file"
+               class="filepond"
+               name="filepond"
+               multiple
+               data-max-file-size="3MB"
+               data-max-files="3">
+      </div>
 
       <footer>
         <p>
@@ -18,7 +25,8 @@
         </p>
       </footer>
     </div>
-    
+    <script>
+    </script>
     <script src="scripts/popup.js"></script>
   </body>
 </html>

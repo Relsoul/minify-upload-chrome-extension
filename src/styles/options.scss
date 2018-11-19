@@ -3,6 +3,7 @@
 @import "modules/grid";
 @import "modules/layout";
 @import "modules/utilities";
+@import "../../node_modules/materialize-css/dist/css/materialize.min";
 
 .heading {
   margin: 1em auto;
@@ -27,7 +28,7 @@
   .radio-group  {
     label {
       display: block;
-    }  
+    }
     input[type="radio"] {
       display: inline-block;
       margin: 3px 5px;

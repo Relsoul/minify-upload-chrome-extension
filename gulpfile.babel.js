@@ -137,6 +137,7 @@ function buildJS(target) {
   let tasks = files.map( file => {
     return browserify({
       entries: 'src/scripts/' + file,
+      paths:['./node_modules'],
       debug: true
     })
     .transform('babelify', { presets: ['es2015'] })

@@ -1,6 +1,10 @@
 @import "modules/reset";
 @import "modules/variables";
 @import "modules/layout";
+@import "../../node_modules/materialize-css/dist/css/materialize.min";
+@import "../../node_modules/filepond/dist/filepond.min";
+@import "../../node_modules/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min";
+//@import "../../node_modules/filepond-plugin-file-poster/dist/filepond-plugin-file-poster.min";
 
 body, html {
   padding: 0;
@@ -26,9 +30,9 @@ footer {
 }
 
 .popup-content {
-  min-width: 220px;
-  min-height: 100px;
-  max-width: 350px;
+  min-width: 600px;
+  min-height: 400px;
+  position: relative;
 }
 
 .app-name {
@@ -85,4 +89,9 @@ footer {
   border-radius: 2px;
   outline: none;
   font-size: 1em;
+}
+
+.filepond--file-info{
+  user-select:initial;
+  pointer-events:initial;
 }

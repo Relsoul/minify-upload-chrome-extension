@@ -10,33 +10,45 @@
   <div class="grid">
     <div class="unit whole center-on-mobiles">
       <div class="heading">
-        <h1>Extension Boilerplate</h1>
-        <p class="lead">A foundation for creating cross-browser extensions</p>  
+        <h1>minify-upload</h1>
+        <p class="lead">快捷、轻量的上传插件</p>
       </div>
     </div>
   </div>
-  
+
   <section class="content">
-    <div class="grid">
-      <div class="unit whole center-on-mobiles">
-        <div class="option">
-          <h5>Popup color</h5>  
-          <div class="radio-group">
-            <label><input class="js-radio white" type="radio" name="radio" value="white">White</label>
-            <label><input class="js-radio beige" type="radio" name="radio" value="beige">Beige</label>
-            <label><input class="js-radio lavender" type="radio" name="radio" value="lavender">Lavender</label>
+    <div class="row">
+      <form class="col s12" id="ops-form" action="">
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="http://xxx.com" id="server_addr" name="server_addr" type="text" class="validate">
+            <label for="server_addr">服务器地址</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="secret" placeholder="后端定义好的密钥" type="text" class="validate" name="secret">
+            <label for="secret">服务器密钥</label>
           </div>
         </div>
-        
-        <div class="option">
-          <em class="text-muted">...display your extensions' options here...</em>
+        <div class="row">
+          <div class="input-field col s6">
+            <input placeholder="用户名" id="user" name="user" type="text" class="validate">
+            <label for="user">用户名</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="pw" name="pw" type="password" class="validate">
+            <label for="pw">密码</label>
+          </div>
         </div>
-
-      </div>
-    </div>  
+        <div class="row">
+          <div class="col s12">
+            <a class="waves-effect waves-light btn" id="submit-ops">保存</a>
+          </div>
+        </div>
+      </form>
+    </div>
   </section>
-  
-  
+
+
   <footer class="main-footer">
     <div class="grid">
       <div class="unit whole center-on-mobiles">
@@ -45,7 +57,7 @@
         </p>
       </div>
     </div>
-  
+
   </footer>
   <script src="scripts/options.js"></script>
 </body>
