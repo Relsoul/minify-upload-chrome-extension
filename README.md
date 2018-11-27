@@ -9,14 +9,16 @@
 
 ![](http://cdn.relsoul.com/public/uploads/image-1542643988874.png)
 
+# 安装
+```
+npm install
+```
 
 # 编译
+本项目基于[extension-boilerplate](https://github.com/EmailThis/extension-boilerplate) 开发
 
 ```
 npm run build
 ```
-
-# 安装
-
 
 # todolist
