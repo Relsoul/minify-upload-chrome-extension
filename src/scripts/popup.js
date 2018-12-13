@@ -46,6 +46,7 @@ const initPageShow = function() {
 
 function initApp({ ops }) {
   console.log("FilePond", FilePond);
+  $('.main-content').show();
   const conf = {};
   for (let i of ops) {
     conf[i.name] = i.value;

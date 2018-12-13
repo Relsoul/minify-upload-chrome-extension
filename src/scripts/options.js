@@ -9,7 +9,7 @@ $('#submit-ops').on('click',function (e) {
   const ops = $('#ops-form').serializeArray();
   console.log('eee',ops);
   storage.set({ ops }, function() {
-    M.toast({html: '保存成功'})
+    M.toast({html: '保存成功，请重新打开chrome插件或者刷新弹出页'})
   });
 });
 

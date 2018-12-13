@@ -1,31 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <link href="styles/popup.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <link href="styles/popup.css" rel="stylesheet" />
   </head>
   <body class="minfiy-upload-body">
     <div id="app" class="popup-content">
-      <h1 class="app-name">minify-upload</h1>
-      <p>复制图片后在此窗口ctrl+v/粘贴 即可上传</p>
+      <h1 class="app-name">
+        minify-upload
+        <a href="#" class="js-options waves-effect waves-light btn" style="line-height: 1.5">选项页</a>
+      </h1>
 
-      <div id="display-container">
-        <input id="file-input" type="file"
-               class="filepond"
-               name="filepond"
-               multiple>
+      <div class="main-content" style="display: none">
+        <p>复制图片后在此窗口ctrl+v/粘贴 即可上传</p>
+
+        <div id="display-container">
+          <input
+            id="file-input"
+            type="file"
+            class="filepond"
+            name="filepond"
+            multiple
+          />
+        </div>
       </div>
 
-      <footer>
-        <p>
-          <small>
-            <a href="#" class="js-options">Options</a>
-          </small>
-        </p>
-      </footer>
     </div>
-    <script>
-    </script>
     <script src="scripts/popup.js"></script>
   </body>
 </html>
